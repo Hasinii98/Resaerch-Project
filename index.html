@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="{{url_for('static',filename='styles.css')}}" >
+<link rel="stylesheet" href="styles.css">
+
+
+
+  <div class="row">
+    <div class="column">
+      <img src="static/temp.png" alt="Snow" class = "namesign">
+    </div>  
+    <div class="column">
+      <img src="static/Hastha-Logo-Draft-1.png" alt="Forest" class="logo">
+    </div>
+    </div>
+ 
+ 
+  </head>
+  
+  <body>
+    
+   
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">             
+
+		 <div class="desc">
+		 <p><center><br>
+		</center></p>	
+		</div>
+	
+				
+	
+	<div class="vid1">
+	<video controls loop autoplay="autoplay"  width="640" height="360">
+		<source id="demo" src={{mode}}>
+	</video>
+	</div>
+	
+	
+	<div class="letter">
+		<p>Predicted Sign: {{value}}</p>
+		</div>
+		
+		<div class="dyn">
+		<P>Dynamic Signs</p>
+		</div>
+	
+	  <div class="button">	
+			  
+	  <form action='/months' method="POST" enctype="multipart/form-data">
+		<button type="submit"  class="btn3">MONTHS</button>
+	  </form><br>
+	  	  
+	  
+	  <form action='/days' method="POST" enctype="multipart/form-data">
+		<button type="submit"  class="btn4">DAYS</button>
+	  </form><br>
+	  
+	  <form action='/colours' method="POST" enctype="multipart/form-data">
+		<button type="submit"  class="btn5">COLOURS</button>
+	  </form><br>
+	  
+	 </div>
+	 
+	 <div class="stat">
+		<P>Static Signs</p>
+		</div>
+	
+	 
+	 <div class="button">	
+	 <form action='/prediction' method="POST" enctype="multipart/form-data">
+		<button type="submit"  class="btn1">ALPHABET</button>
+       </form>
+
+		 <form action='/numbers' method="POST" enctype="multipart/form-data">
+		<button type="submit"  class="btn2">NUMBERS</button>
+	  </form>
+	  
+	  </div>
+	  
+    </section>        	
+  </body>
+</html>
